@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>BMI Calculater App</title>
+
+    </head>
+    <body>
+        <div class ='container'>
+            <h3>BMI Calculater App</h3>
+        </div>
+        <!--form-->
+        <div class ='container'>
+            <form action="{{ url_for('predict')}}" method="post">
+                Weight:
+                <input
+                        type="text"
+                        placeholder="Weights in (kgs)"
+                        class="u-full-width"
+                        name="weight"
+                />
+                Hight:
+                <input
+                        type="text"
+                        placeholder="hight in (m)"
+                        class="u-full-width"
+                        name="hight"
+                />
+				Sex:
+                <input
+                        type="text"
+                        placeholder="sex in Male/Female"
+                        class="u-full-width"
+                        name="sex"
+                />
+                Waist:
+                <input
+                        type="text"
+                        placeholder="waist size in (cm)"
+                        class="u-full-width"
+                        name="waist"
+                />
+               
+
+                <input type="submit" value="calculator" id="calc_btn">
+                
+            </form><br><br>
+			{{BMI}}
+        </div>
+    </body>
+</html>
